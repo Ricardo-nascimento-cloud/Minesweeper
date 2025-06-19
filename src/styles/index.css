@@ -38,7 +38,7 @@
 }
 
 .aboutButton, .playButton {
-    background-color: deepskyblue;
+    background-color: #307d24;
     color: white;
     width: 200px;
     height: 50px;
@@ -46,9 +46,96 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+/* coloque uma transicao nos botoes */
+.aboutButton:hover, .playButton:hover , .btnhome:hover {
+    background-color: #13440d;
+    transition: background-color 0.5s ease-in-out;
+}
+/* imagem ifpe */
+.logoIFPE {
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.aboutButton:hover, .playButton:hover {
-    background-color: rgb(8, 131, 255);
-    transition: 200ms ease-in-out;
+.btnhome {
+  background-color: #307d24;
+  color: white;
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  margin: 50px;
+}
+
+.dev {
+    font-size: 36px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.dev-info {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    margin-top: 50px;
+    text-align: left;
+    gap: 24px;
+}
+
+.dev-informacao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dev-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 0;
+    margin-left: 50px;
+    margin-right: 0;
+    display: block;
+}
+
+.dev-name {
+    margin: 0;
+    font-size: 36px;
+}
+
+.email a{
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0;
+    color: black;
+    transition: color 0.5s ease-in-out;
+}
+
+.email a:hover {
+    color: green;
+    transition: color 0.5s ease-in-out;
+}
+
+.rodape {
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #307d24;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    
 }
