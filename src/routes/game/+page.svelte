@@ -1,2 +1,1 @@
-<h1>game</h1>
-<a href="/">home</a>
+<button class="btnhome" aria-label="Button">Home</button>
