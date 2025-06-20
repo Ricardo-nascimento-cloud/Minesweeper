@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: url('/cursor.png'), auto;
+}
+body {
+    cursor: url('/cursor.png'), auto;  
 }
 
 .container {
@@ -48,12 +52,12 @@
     cursor: pointer;
     transition: background-color 0.5s ease-in-out;
 }
-/* coloque uma transicao nos botoes */
+
 .aboutButton:hover, .playButton:hover , .btnhome:hover {
     background-color: #13440d;
     transition: background-color 0.5s ease-in-out;
 }
-/* imagem ifpe */
+
 .logoIFPE {
     width: 200px;
     height: 200px;
@@ -81,13 +85,14 @@
     font-size: 36px;
     margin-top: 50px;
     text-align: center;
+    
 }
 
 .dev-info {
     display: flex;
     align-items: center;
     font-size: 36px;
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: left;
     gap: 24px;
 }
@@ -138,4 +143,51 @@
     justify-content: center;
     font-size: 18px;
     
+}
+
+/* responsividade */
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 48px;
+    }
+
+    .buttons {
+        flex-direction: column; 
+        gap: 10px;  /* reduz o espaço entre os botões */
+    }
+    
+    .aboutButton, .playButton, .btnhome {
+        width: 120px; 
+        height: 40px;
+        font-size: 18px;
+
+    }
+
+    .dev {
+        font-size: 24px; 
+    }
+
+    .dev-info {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .dev-img {
+        width: 100px; 
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .dev-name {
+        font-size: 24px; 
+    }
+
+    .email a {
+        font-size: 16px;
+    }
+
+    .rodape {
+        font-size: 14px;
+    }
 }
