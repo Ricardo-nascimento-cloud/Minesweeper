@@ -1,0 +1,43 @@
+
+.game {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.game > div {
+    width: 5%;
+    height: 5%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    border: 1px solid #111;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: rgba(62, 63, 63, 0.733);
+    color: rgba(255, 255, 255, 0.288);
+    position: relative;
+  } 
+
+.game > div::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #111;
+    border-radius: 50%;
+  }
+
+.game > div:hover::before {
+    opacity: 1;
+  }
