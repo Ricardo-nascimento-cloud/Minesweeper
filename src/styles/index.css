@@ -34,11 +34,34 @@ body {
     width: 500px;
     height: 500px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    justify-content: center;
+    gap: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -110px;
+    margin-bottom: 0;
+}
+
+.logoGame {
+    width: 230px;
+    height: 230px;
+    margin-top: 0;
+    border-radius: 5px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.logoIFPE {
+    width: 200px;
+    height: 200px;
     margin-top: 0;
-    margin-bottom: 0;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .buttons {
@@ -51,7 +74,11 @@ body {
 }
 
 .aboutButton, .playButton {
-    background-color: #6b6b6b;
+    background-image: url(/btn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
     color: white;
     width: 200px;
     height: 50px;
@@ -62,23 +89,12 @@ body {
     transition: background-color 0.5s ease-in-out;
 }
 
-.aboutButton:hover, .playButton:hover , .btnhome:hover {
-    background-color: #424242;
-    transition: background-color 0.5s ease-in-out;
-}
-
-.logoIFPE {
-    width: 200px;
-    height: 200px;
-    margin-top: 50px;
-    border-radius: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .btnhome {
-  background-color: #6b6b6b;
+  background-image: url(/btn.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
   color: white;
   width: 200px;
   height: 50px;
@@ -90,11 +106,19 @@ body {
   margin: 50px;
 }
 
+.aboutButton:hover, .playButton:hover , .btnhome:hover {
+    background-color: #424242;
+    filter: brightness(1.2);
+    transition: background-color 0.5s ease-in-out;
+}
+
 .dev {
     font-size: 36px;
     margin-top: 50px;
     text-align: center;
-    
+    margin-top: -50px;
+    margin-bottom: 50px;
+    color: white;
 }
 
 .dev-info {
@@ -125,18 +149,20 @@ body {
 .dev-name {
     margin: 0;
     font-size: 36px;
+    color: white;
 }
 
 .email a{
     font-size: 18px;
     text-decoration: none;
     margin: 0;
-    color: black;
+    color: white;
     transition: color 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .email a:hover {
-    color: green;
+    color: black;
     transition: color 0.5s ease-in-out;
 }
 
