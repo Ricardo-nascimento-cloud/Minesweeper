@@ -96,7 +96,7 @@ button.reiniciar:hover, .btnhome1:hover {
     outline: 2px solid #009;
   }
 
-  .revelado {
+  .revealed {
     background-color: #ccc !important;
     color: black !important;
   }

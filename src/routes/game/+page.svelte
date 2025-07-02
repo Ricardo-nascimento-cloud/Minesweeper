@@ -3,7 +3,7 @@
 
   let grid: cell[][] = createBoard(20, 20);
   let gameOver: boolean = false;
-  let vitoria: boolean = false;
+  let youWon: boolean = false;
 
   function revelar(i: number, j: number): void {
     if (gameOver || grid[i][j].isRevealed || grid[i][j].isFlagged) return;
@@ -46,7 +46,7 @@
         }
       }
     }
-    vitoria = true;
+    youWon = true;
     alert("🎉 win!");
   }
 
@@ -61,16 +61,17 @@
   function resetar(): void {
     grid = createBoard(20, 20);
     gameOver = false;
-    vitoria = false;
+    youWon = false;
   }
 </script>
+
 <div class="nav">
   <a href="/">
   <button class="btnhome1">Home</button>
   </a>
   <img class="logoGame1" src="/logo.png" alt="Logo do jogo" />
 </div>
-<h1>{gameOver ? "💥 Game Over" : vitoria ? "🎉 win!" : "Minesweeper"}</h1>
+<h1>{gameOver ? "💥 Game Over" : youWon ? "🎉 win!" : "Minesweeper"}</h1>
 <button class="reiniciar" on:click={resetar}>🔄 Reiniciar</button>
 
 <div class="game">
@@ -78,13 +79,12 @@
     {#each row as box, j}
       <button
         class="cell"
-        class:revelado={box.isRevealed}
+        class:revealed={box.isRevealed}
         class:bomb={box.isBomb && box.isRevealed}
         class:flag={box.isFlagged && !box.isRevealed}
         disabled={box.isRevealed}
         on:click={() => revelar(i, j)}
-        on:contextmenu={(e) => toggleFlag(i, j, e)}
-        aria-label="Célula do jogo"
+        on:contextmenu={(e) => toggleFlag(i, j, e)} 
       >
         {#if box.isRevealed}
           {#if box.isBomb}
