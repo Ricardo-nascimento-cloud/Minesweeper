@@ -45,7 +45,7 @@
         <div class="dev-info">
             <img class="dev-img" src="/pica-pau-3.jpg" alt="Desenvolvedor 1" />
             <div class="dev-informacao">
-            <p class="dev-name">Thyago</p>
+            <p class="dev-name">Thyago Ruan</p>
             <p class="email"><a href="mailto:@discente.ifpe.edu.br">@discente.ifpe.edu.br</a></p>
             </div>
         
