@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { criarTabuleiro, type Celula } from '$lib/index';
+  import { createBoard, type cell } from '$lib/index';
 
-  let grid: Celula[][] = criarTabuleiro(20, 20);
+  let grid: cell[][] = createBoard(20, 20);
   let gameOver: boolean = false;
   let vitoria: boolean = false;
 
@@ -47,7 +47,7 @@
       }
     }
     vitoria = true;
-    alert("🎉 Você venceu!");
+    alert("🎉 win!");
   }
 
   function revelarTodas(): void {
@@ -59,7 +59,7 @@
   }
 
   function resetar(): void {
-    grid = criarTabuleiro(20, 20);
+    grid = createBoard(20, 20);
     gameOver = false;
     vitoria = false;
   }
@@ -70,7 +70,7 @@
   </a>
   <img class="logoGame1" src="/logo.png" alt="Logo do jogo" />
 </div>
-<h1>{gameOver ? "💥 Game Over" : vitoria ? "🎉 Vitória!" : "Campo Minado"}</h1>
+<h1>{gameOver ? "💥 Game Over" : vitoria ? "🎉 win!" : "Minesweeper"}</h1>
 <button class="reiniciar" on:click={resetar}>🔄 Reiniciar</button>
 
 <div class="game">
