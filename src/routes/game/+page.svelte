@@ -12,7 +12,7 @@
 
     if (grid[i][j].isBomb) {
       gameOver = true;
-      alert("💥 Você perdeu!");
+      alert("💥 you lose!");
       revelarTodas();
       return;
     }
@@ -72,7 +72,7 @@
   <img class="logoGame1" src="/logo.png" alt="Logo do jogo" />
 </div>
 <h1>{gameOver ? "💥 Game Over" : youWon ? "🎉 win!" : "Minesweeper"}</h1>
-<button class="reiniciar" on:click={resetar}>🔄 Reiniciar</button>
+<button class="reiniciar" on:click={resetar}> Reset</button>
 
 <div class="game">
   {#each grid as row, i}
