@@ -24,7 +24,7 @@ export function createBoard(row: number, col: number): cell[][] {
 
   // Posiciona bombas
   let placed : number = 0;
-  while (placed < bombs) {
+  while (placed <= bombs) {
     const i = Math.floor(Math.random() * row);
     const j = Math.floor(Math.random() * col);
     if (!grid[i][j].isBomb) {
