@@ -1,9 +1,9 @@
 <div class="logo">
-    <img class="logoIFPE" src="/logoIFPE.png" alt="Logo da instituição" />
+    <img class="logoIFPE" src="/logoIFPE-removebg-preview.png" alt="Logo da instituição" />
     <img class="logoGame" src="/logo.png" alt="Logo do jogo" />
 </div>
 
-<h1 class="dev">Desenvolvedores</h1>
+<h1 class="dev">Developers</h1>
 <div class="dev-info">
     <div class="devs">
         <div class="dev-info">
@@ -22,7 +22,7 @@
             <img class="dev-img" src="/pica-pau-3.jpg" alt="Desenvolvedor 1" />
             <div class="dev-informacao">
             <p class="dev-name">Ricardo João</p>
-            <p class="email"><a href="mailto:@discente.ifpe.edu.br">@discente.ifpe.edu.br</a></p>
+            <p class="email"><a href="mailto:rjnf1@discente.ifpe.edu.br">rjnf1@discente.ifpe.edu.br</a></p>
             </div>
         
         </div>
@@ -34,7 +34,7 @@
             <img class="dev-img" src="/pica-pau-3.jpg" alt="Desenvolvedor 1" />
             <div class="dev-informacao">
             <p class="dev-name">Gabriel Lopes</p>
-            <p class="email"><a href="mailto:@discente.ifpe.edu.br">@discente.ifpe.edu.br</a></p>
+            <p class="email"><a href="mailto:glo3@discente.ifpe.edu.br">glo3@discente.ifpe.edu.br</a></p>
             </div>
         
         </div>
@@ -46,7 +46,7 @@
             <img class="dev-img" src="/pica-pau-3.jpg" alt="Desenvolvedor 1" />
             <div class="dev-informacao">
             <p class="dev-name">Thyago Ruan</p>
-            <p class="email"><a href="mailto:@discente.ifpe.edu.br">@discente.ifpe.edu.br</a></p>
+            <p class="email"><a href="mailto:trgl@discente.ifpe.edu.br">trgl@discente.ifpe.edu.br</a></p>
             </div>
         
         </div>
@@ -58,7 +58,7 @@
             <img class="dev-img" src="/pica-pau-3.jpg" alt="Desenvolvedor 1" />
             <div class="dev-informacao">
             <p class="dev-name">Gabriel Ramos</p>
-            <p class="email"><a href="mailto:@discente.ifpe.edu.br">@discente.ifpe.edu.br</a></p>
+            <p class="email"><a href="mailto:grs21@discente.ifpe.edu.br">grs21@discente.ifpe.edu.br</a></p>
             </div>
         
         </div>

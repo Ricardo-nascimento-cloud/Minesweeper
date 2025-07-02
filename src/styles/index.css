@@ -79,7 +79,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
-    color: white;
+    color: rgb(44, 43, 43);
     width: 200px;
     height: 50px;
     font-size: 24px;
@@ -95,7 +95,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  color: white;
+  color: hwb(0 15% 85%);
   width: 200px;
   height: 50px;
   font-size: 24px;
