@@ -1,6 +1,6 @@
 <div class="container">
     <div class="menu">
-       <img src="/logo.png" alt="Minesweeper Logo" class="logo">
+       <img class="logo" src="/logo.png" alt="Minesweeper Logo" >
         <div class="buttons">
             <a href="/game">
                 <button class="playButton">Play</button>
