@@ -5,7 +5,7 @@
   let gameOver: boolean = false;
   let youWon: boolean = false;
 
-  function revelar(i: number, j: number): void {
+  function reveal(i: number, j: number): void {
     if (gameOver || grid[i][j].isRevealed || grid[i][j].isFlagged) return;
 
     grid[i][j].isRevealed = true;
@@ -13,7 +13,7 @@
     if (grid[i][j].isBomb) {
       gameOver = true;
       alert("💥 you lose!");
-      revelarTodas();
+      revealAll();
       return;
     }
 
@@ -23,13 +23,13 @@
           const ni = i + x;
           const nj = j + y;
           if (ni >= 0 && ni < 20 && nj >= 0 && nj < 20) {
-            revelar(ni, nj);
+            reveal(ni, nj);
           }
         }
       }
     }
 
-    checarVitoria();
+    checkVictory();
   }
 
   function toggleFlag(i: number, j: number, event: MouseEvent): void {
@@ -38,7 +38,7 @@
     grid[i][j].isFlagged = !grid[i][j].isFlagged;
   }
 
-  function checarVitoria(): void {
+  function checkVictory(): void {
     for (let i = 0; i < 20; i++) {
       for (let j = 0; j < 20; j++) {
         if (!grid[i][j].isRevealed && !grid[i][j].isBomb) {
@@ -50,7 +50,7 @@
     alert("🎉 win!");
   }
 
-  function revelarTodas(): void {
+  function revealAll(): void {
     for (let i = 0; i < 20; i++) {
       for (let j = 0; j < 20; j++) {
         grid[i][j].isRevealed = true;
@@ -58,7 +58,7 @@
     }
   }
 
-  function resetar(): void {
+  function reset(): void {
     grid = createBoard(20, 20);
     gameOver = false;
     youWon = false;
@@ -72,7 +72,7 @@
   <img class="logoGame1" src="/logo.png" alt="Logo do jogo" />
 </div>
 <h1>{gameOver ? "💥 Game Over" : youWon ? "🎉 win!" : "Minesweeper"}</h1>
-<button class="reiniciar" on:click={resetar}> Reset</button>
+<button class="reiniciar" on:click={reset}> Reset</button>
 
 <div class="game">
   {#each grid as row, i}
@@ -83,7 +83,7 @@
         class:bomb={box.isBomb && box.isRevealed}
         class:flag={box.isFlagged && !box.isRevealed}
         disabled={box.isRevealed}
-        on:click={() => revelar(i, j)}
+        on:click={() => reveal(i, j)}
         on:contextmenu={(e) => toggleFlag(i, j, e)} 
       >
         {#if box.isRevealed}

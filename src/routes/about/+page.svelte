@@ -1,6 +1,6 @@
 <div class="logo">
     <img class="logoIFPE" src="/logoIFPE-removebg-preview.png" alt="Logo da instituição" />
-    <img class="logoGame" src="/logo.png" alt="Logo do jogo" />
+    <img class="logoGame" src="/logo.png" alt="Logo do game" />
 </div>
 
 <h1 class="dev">Developers</h1>
