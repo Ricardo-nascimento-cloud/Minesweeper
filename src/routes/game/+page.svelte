@@ -83,6 +83,7 @@
         class:bomb={box.isBomb && box.isRevealed}
         class:flag={box.isFlagged && !box.isRevealed}
         disabled={box.isRevealed}
+        class:chess={(i + j) % 2 === 0}
         on:click={() => reveal(i, j)}
         on:contextmenu={(e) => toggleFlag(i, j, e)} 
       >
