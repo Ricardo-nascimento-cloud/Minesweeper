@@ -82,7 +82,7 @@ button.reiniciar:hover, .btnhome1:hover {
     justify-content: center;
     font-family: monospace;
     border: 1px solid #111;
-    background-color: rgba(62, 63, 63, 0.733);
+    background-color: #595959;
     color: rgba(255, 255, 255, 0.9);
     box-sizing: border-box;
     cursor: pointer;
@@ -90,6 +90,22 @@ button.reiniciar:hover, .btnhome1:hover {
     user-select: none;
     padding: 0;
     font-size: 14px;
+    transition: background 0.5s;
+  }
+
+  .cell.chess {
+    background-color: #787777;
+  }
+
+  .cell.revealed.chess{
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 6px #aaa;
+  }
+
+  .cell.revealed:not(.chess){
+    background-color: #dfdede;
+    color: black;
   }
 
   .cell:focus {
@@ -97,7 +113,7 @@ button.reiniciar:hover, .btnhome1:hover {
   }
 
   .revealed {
-    background-color: #ccc !important;
+    /* background-color: #ccc !important; */
     color: black !important;
   }
 
