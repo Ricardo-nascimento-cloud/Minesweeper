@@ -1,3 +1,5 @@
+import '../styles/index.css';
+
 export const bombs: number = 40;
 
 export type cell = {
