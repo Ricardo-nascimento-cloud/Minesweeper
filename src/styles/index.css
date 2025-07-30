@@ -73,7 +73,7 @@ body {
     gap: 20px;
 }
 
-.aboutButton, .playButton {
+.aboutButton, .playButton, .settingsButton {
     background-image: url(/btn.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -106,10 +106,39 @@ body {
   margin: 50px;
 }
 
-.aboutButton:hover, .playButton:hover , .btnhome:hover {
+.aboutButton:hover, .playButton:hover , .btnhome:hover, .settingsButton:hover {
     background-color: #424242;
     filter: brightness(1.2);
     transition: background-color 0.5s ease-in-out;
+}
+
+.settings-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.settings-content {
+  background: #424242;
+  padding: 32px 24px 24px 24px;
+  border-radius: 8px;
+  min-width: 400px;
+  /* min-height: 300px; */
+  /* width: 400px; */
+  /* height: auto; */
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .dev {
@@ -191,7 +220,7 @@ body {
         gap: 10px;  /* reduz o espaço entre os botões */
     }
     
-    .aboutButton, .playButton, .btnhome {
+    .aboutButton, .playButton, .btnhome, .settingsButton {
         width: 120px; 
         height: 40px;
         font-size: 18px;
