@@ -1,9 +1,26 @@
 <script lang="ts">
   import { createBoard, type cell } from '$lib/index';
+  import { currentDifficultySettings } from '$lib/difficultySettings';
 
-  let grid: cell[][] = createBoard(20, 20);
+  let rows: number;
+  let cols: number;
+  let bombs: number;
+
+  $: {
+    rows = $currentDifficultySettings.rows;
+    cols = $currentDifficultySettings.cols;
+    bombs = $currentDifficultySettings.bombs;
+  }
+
+  let grid: cell[][];
   let gameOver: boolean = false;
   let youWon: boolean = false;
+
+  $: if (rows && cols && bombs) {
+    grid = createBoard(rows, cols, bombs);
+    gameOver = false;
+    youWon = false;
+  }
 
   function reveal(i: number, j: number): void {
     if (gameOver || grid[i][j].isRevealed || grid[i][j].isFlagged) return;
@@ -12,7 +29,7 @@
 
     if (grid[i][j].isBomb) {
       gameOver = true;
-      alert("💥 you lose!");
+      alert("💥 você perdeu!");
       revealAll();
       return;
     }
@@ -22,7 +39,7 @@
         for (let y = -1; y <= 1; y++) {
           const ni = i + x;
           const nj = j + y;
-          if (ni >= 0 && ni < 20 && nj >= 0 && nj < 20) {
+          if (ni >= 0 && ni < rows && nj >= 0 && nj < cols) {
             reveal(ni, nj);
           }
         }
@@ -36,30 +53,31 @@
     event.preventDefault();
     if (gameOver || grid[i][j].isRevealed) return;
     grid[i][j].isFlagged = !grid[i][j].isFlagged;
+    grid = grid;
   }
 
   function checkVictory(): void {
-    for (let i = 0; i < 20; i++) {
-      for (let j = 0; j < 20; j++) {
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < cols; j++) {
         if (!grid[i][j].isRevealed && !grid[i][j].isBomb) {
           return;
         }
       }
     }
     youWon = true;
-    alert("🎉 win!");
+    alert("🎉 Você venceu!");
   }
 
   function revealAll(): void {
-    for (let i = 0; i < 20; i++) {
-      for (let j = 0; j < 20; j++) {
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < cols; j++) {
         grid[i][j].isRevealed = true;
       }
     }
   }
 
   function reset(): void {
-    grid = createBoard(20, 20);
+    grid = createBoard(rows, cols, bombs);
     gameOver = false;
     youWon = false;
   }
@@ -67,15 +85,14 @@
 
 <div class="nav">
   <a href="/">
-  <button class="btnhome1">Home</button>
+    <button class="btnhome1">Home</button>
   </a>
   <img class="logoGame1" src="/logo.png" alt="Logo do jogo" />
 </div>
-<h1>{gameOver ? "💥 Game Over" : youWon ? "🎉 win!" : "Minesweeper"}</h1>
+<h1>{gameOver ? "💥 Game Over" : youWon ? "🎉 Você Venceu!" : "Campo Minado"}</h1>
 <button class="reiniciar" on:click={reset}> Reset</button>
 
-<div class="game">
-  {#each grid as row, i}
+<div class="game" style="--grid-rows: {rows}; --grid-cols: {cols};"> {#each grid as row, i}
     {#each row as box, j}
       <button
         class="cell"
@@ -85,7 +102,7 @@
         disabled={box.isRevealed}
         class:chess={(i + j) % 2 === 0}
         on:click={() => reveal(i, j)}
-        on:contextmenu={(e) => toggleFlag(i, j, e)} 
+        on:contextmenu={(e) => toggleFlag(i, j, e)}
       >
         {#if box.isRevealed}
           {#if box.isBomb}
