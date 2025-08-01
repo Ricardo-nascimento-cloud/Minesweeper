@@ -1,7 +1,3 @@
-import '../styles/index.css';
-
-export const bombs: number = 40;
-
 export type cell = {
   isBomb: boolean;
   isRevealed: boolean;
@@ -9,7 +5,7 @@ export type cell = {
   distance: number;
 };
 
-export function createBoard(row: number, col: number): cell[][] {
+export function createBoard(row: number, col: number, bombsCount: number): cell[][] {
   const grid: cell[][] = [];
 
   for (let i = 0; i < row; i++) {
@@ -26,7 +22,7 @@ export function createBoard(row: number, col: number): cell[][] {
 
   // Posiciona bombas
   let placed : number = 0;
-  while (placed <= bombs) {
+  while (placed < bombsCount) {
     const i = Math.floor(Math.random() * row);
     const j = Math.floor(Math.random() * col);
     if (!grid[i][j].isBomb) {

@@ -126,11 +126,35 @@ body {
   padding: 32px 24px 24px 24px;
   border-radius: 8px;
   min-width: 400px;
-  /* min-height: 300px; */
-  /* width: 400px; */
-  /* height: auto; */
+  min-height: 300px;
+  width: 400px;
+  height: auto;
   position: relative;
 }
+
+.settings-content label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  color: white;
+  font-size: 18px;
+}
+
+.difficulty-select {
+    background: #424242;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.difficulty-select:hover {
+    background: #6b6b6b;
+}
+
 .close-btn {
   position: absolute;
   top: 8px;
@@ -207,6 +231,7 @@ body {
     justify-content: center;
     font-size: 18px;
 }
+
 
 /* responsividade */
 
