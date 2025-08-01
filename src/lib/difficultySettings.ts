@@ -1,4 +1,5 @@
 import { writable, derived, get } from 'svelte/store';
+import './style.css';
 
 export enum DifficultyLevel {
   EASY = 'easy',
