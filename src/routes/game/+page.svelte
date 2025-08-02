@@ -1,6 +1,4 @@
 <script lang="ts">
-  import '../index.css';
-  import '../jogo.css';
   import { createBoard, type cell } from '$lib/index';
   import { currentDifficultySettings } from '$lib/difficultySettings';
 
