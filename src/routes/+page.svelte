@@ -1,5 +1,5 @@
 <script lang="ts">
-  import '../../index.css';// Importa o CSS global
+  import '../../index.css';
   import '../../jogo.css';
   import { currentDifficultyLevel, DifficultyLevel } from '$lib/difficultySettings'; // Importa o store e o enum
 
@@ -38,9 +38,9 @@
       </label>
       <label>
         Dificuldade:
-        <select class="difficulty-select" bind:value={selectedDifficulty}> <option value={DifficultyLevel.EASY}>Fácil</option>
-          <option value={DifficultyLevel.NORMAL}>Normal</option>
-          <option value={DifficultyLevel.HARD}>Difícil</option>
+        <select class="difficulty-select" bind:value={selectedDifficulty}> <option value={DifficultyLevel.EASY}>EASY</option>
+          <option value={DifficultyLevel.NORMAL}>NORMAL</option>
+          <option value={DifficultyLevel.HARD}>HARD</option>
           </select>
       </label>
     </div>    
