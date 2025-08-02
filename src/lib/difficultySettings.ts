@@ -1,4 +1,5 @@
 import { writable, derived, get } from 'svelte/store';
+import { browser } from '$app/environment'; // Importa o 'browser' do SvelteKit
 
 export enum DifficultyLevel {
   EASY = 'easy',
@@ -27,9 +28,9 @@ export const predefinedDifficultySettings: Record<DifficultyLevel, GameDifficult
   [DifficultyLevel.HARD]: {
     rows: 20,
     cols: 20,
-    bombs: 60, 
+    bombs: 60,
   },
-  [DifficultyLevel.CUSTOM]: { 
+  [DifficultyLevel.CUSTOM]: {
     rows: 20,
     cols: 20,
     bombs: 30,
@@ -43,16 +44,20 @@ function isValidDifficultyLevel(value: string | null): value is DifficultyLevel 
          value === DifficultyLevel.CUSTOM;
 }
 
-const storedLevel = localStorage.getItem('minesweeperDifficulty');
-const initialDifficulty: DifficultyLevel = isValidDifficultyLevel(storedLevel)
-  ? storedLevel
-  : DifficultyLevel.NORMAL;
+export const currentDifficultyLevel = writable<DifficultyLevel>(DifficultyLevel.NORMAL);
 
-export const currentDifficultyLevel = writable<DifficultyLevel>(initialDifficulty);
+if (browser) {
+  const storedLevel = localStorage.getItem('minesweeperDifficulty');
+  const initialDifficulty: DifficultyLevel = isValidDifficultyLevel(storedLevel)
+    ? storedLevel
+    : DifficultyLevel.NORMAL;
 
-currentDifficultyLevel.subscribe(value => {
-  localStorage.setItem('minesweeperDifficulty', value);
-});
+  currentDifficultyLevel.set(initialDifficulty);
+
+  currentDifficultyLevel.subscribe(value => {
+    localStorage.setItem('minesweeperDifficulty', value);
+  });
+}
 
 export const currentDifficultySettings = derived(
   currentDifficultyLevel,
@@ -64,8 +69,10 @@ export const customCols = writable<number>(predefinedDifficultySettings[Difficul
 export const customBombs = writable<number>(predefinedDifficultySettings[DifficultyLevel.CUSTOM].bombs);
 
 function updateCustomSetting<K extends keyof GameDifficultySettings>(key: K, value: GameDifficultySettings[K]) {
+ 
   if (get(currentDifficultyLevel) === DifficultyLevel.CUSTOM) {
     predefinedDifficultySettings[DifficultyLevel.CUSTOM][key] = value;
+    currentDifficultyLevel.set(get(currentDifficultyLevel));
   }
 }
 
