@@ -236,6 +236,10 @@ body {
 /* responsividade */
 
 @media (max-width: 768px) {
+    body{
+        background-image: url("/bac.webp");
+        background-size: cover;
+    }
     .title {
         font-size: 48px;
     }
@@ -278,4 +282,29 @@ body {
     .rodape {
         font-size: 14px;
     }
+}
+
+@media (max-width: 720px) {
+    body {
+        background-image: url("/bac.webp");
+        background-size: cover;
+    }
+  .container {
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+  }
+  .menu {
+    width: 95vw;
+    min-width: unset;
+  }
+  .logo {
+    width: 60vw;
+    max-width: 200px;
+  }
+  .settings-content {
+    min-width: 90vw;
+    width: 90vw;
+    padding: 16px 4vw;
+  }
 }
