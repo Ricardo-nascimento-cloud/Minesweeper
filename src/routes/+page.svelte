@@ -1,5 +1,5 @@
 <script lang="ts">
-  import '../../index.css';
+  import '../../index.css';// Importa o CSS global
   import '../../jogo.css';
   import { currentDifficultyLevel, DifficultyLevel } from '$lib/difficultySettings'; // Importa o store e o enum
 
