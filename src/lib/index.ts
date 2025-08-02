@@ -1,5 +1,3 @@
-import'./style.css';// Importando CSS para aplicar estilos globais
-
 export type cell = {
   isBomb: boolean;
   isRevealed: boolean;
