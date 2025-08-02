@@ -1,6 +1,6 @@
 <script lang="ts">
-  import '../index.css';
-  import '../jogo.css';
+  import '../../index.css';
+  import '../../jogo.css';
   import { currentDifficultyLevel, DifficultyLevel } from '$lib/difficultySettings'; // Importa o store e o enum
 
   let showSettings: boolean = false;
