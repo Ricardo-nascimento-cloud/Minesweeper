@@ -55,7 +55,6 @@
 <div class="dev-info">
     <div class="devs">
         <div class="dev-info">
-            <img class="dev-img" src="/pica-pau-3.jpg" alt="Desenvolvedor 1" />
             <div class="dev-informacao">
             <p class="dev-name">Gabriel Ramos</p>
             <p class="email"><a href="mailto:grs21@discente.ifpe.edu.br">grs21@discente.ifpe.edu.br</a></p>
