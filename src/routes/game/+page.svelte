@@ -120,7 +120,7 @@
 
 <h1>{gameOver ? "💥 Game Over" : youWon ? "🎉 youWon!" : "Minesweeper"}</h1>
 <button class="reiniciar" on:click={reset}>Reset</button>
-<div class="timer">⏱️ Tempo: {time}</div>
+<div class="timer">⏱️ {time}</div>
 
 <div class="game" style="--grid-rows: {rows}; --grid-cols: {cols};">
   {#each grid as row, i}
