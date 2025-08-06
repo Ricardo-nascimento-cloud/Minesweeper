@@ -118,10 +118,9 @@
   <img class="logoGame1" src="/logo.png" alt="Logo do jogo" />
 </div>
 
-<h1>{gameOver ? "💥 Game Over" : youWon ? "🎉 youWon!" : "Minesweeper"}</h1>
+<h1>{gameOver ? "💥 Game Over" : youWon ? "🎉 YouWon!" : "Minesweeper"}</h1>
 <button class="reiniciar" on:click={reset}>Reset</button>
 <div class="timer">⏱️ {time}</div>
-
 <div class="game" style="--grid-rows: {rows}; --grid-cols: {cols};">
   {#each grid as row, i}
     {#each row as box, j}

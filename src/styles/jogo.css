@@ -24,6 +24,7 @@
   background-position: center;
   background-color: transparent;
   color: rgb(46, 44, 44);
+  font-family: 'Arial', sans-serif;
   width: 200px;
   height: 50px;
   font-size: 24px;
@@ -48,6 +49,7 @@ h1 {
     background-position: center;
     background-color: transparent;
     color: rgb(46, 44, 44);
+    font-family: 'Arial', sans-serif;
     margin: 10px auto;
     display: block;
     font-weight: bold;
@@ -125,8 +127,14 @@ button.reiniciar:hover, .btnhome1:hover {
     color: black !important;
   }
 
-  .bomb {
-    background-color: red !important;
+ .cell.bomb {
+    background-color: rgb(49, 49, 49) !important;
+    color: transparent;
+    text-indent: -9999px; 
+    background-image: url('/bomb.jfif');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .flag::after {
@@ -149,7 +157,7 @@ button.reiniciar:hover, .btnhome1:hover {
     .timer {
       font-size: 4vw;
     }
-    
+
     .game {
         width: 98vw;
         height: 98vw;

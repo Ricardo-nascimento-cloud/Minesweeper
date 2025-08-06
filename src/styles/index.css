@@ -77,37 +77,47 @@ img, .logo, .logoGame, .logoIFPE {
     gap: 20px;
 }
 
-.aboutButton, .playButton, .settingsButton {
+.playButton, .aboutButton, .settingsButton {
     background-image: url(/btn.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
     color: rgb(44, 43, 43);
+    font-family: 'Arial', sans-serif;
     width: 200px;
     height: 50px;
-    font-size: 24px;
+    font-size: 1.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.5s ease-in-out;
+    text-decoration: none; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 }
 
 .btnhome {
-  background-image: url(/btn.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-  color: hwb(0 15% 85%);
-  width: 200px;
-  height: 50px;
-  font-size: 24px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.5s ease-in-out;
-  margin: 50px;
+ background-image: url(/btn.png);
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-color: transparent;
+ color: hwb(0 15% 85%);
+ font-family: 'Arial', sans-serif;
+ width: 200px;
+ height: 50px;
+ font-size: 1.5rem;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background-color 0.5s ease-in-out;
+ margin: 50px;
+ text-decoration: none;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 .aboutButton:hover, .playButton:hover , .btnhome:hover, .settingsButton:hover {
@@ -253,6 +263,19 @@ img, .logo, .logoGame, .logoIFPE {
         margin-top: -80px;
     }
 
+    .logoIFPE {
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+
+    }
+
+    .logoGame {
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+    }
+
     .title {
         font-size: 48px;
     }
@@ -266,7 +289,6 @@ img, .logo, .logoGame, .logoIFPE {
         width: 120px; 
         height: 40px;
         font-size: 18px;
-
     }
 
     .dev {

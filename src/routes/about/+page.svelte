@@ -66,8 +66,8 @@
 </div>
 
 <div class="buttons">
-    <a href="/">
-        <button class="btnhome">Home</button>
+    <a href="/" class="btnhome"> 
+       Home
     </a>
 </div>
 
@@ -75,3 +75,12 @@
 <footer class="rodape">
     <p>&copy; 2025 Minesweeper. Todos os direitos reservados.</p>
 </footer>
+
+<svelte:head>
+  <style>
+    html, body {
+      overflow: auto !important;
+      overflow-x: hidden !important;
+    }
+  </style>
+</svelte:head>

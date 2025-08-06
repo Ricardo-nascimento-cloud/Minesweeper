@@ -12,17 +12,11 @@
 <div class="container">
   <div class="menu">
     <img class="logo" src="/logo.png" alt="Minesweeper Logo" />
-    <div class="buttons">
-      <a href="/game">
-        <button class="playButton">Play</button>
-      </a>
-
-      <a href="/about">
-        <button class="aboutButton">About</button>
-      </a>
-
-      <button class="settingsButton" on:click={() => showSettings = true}>Settings</button>
-    </div>
+  <div class="buttons">
+    <a href="/game" class="playButton">Play</a>
+    <a href="/about" class="aboutButton">About</a>
+    <button class="settingsButton" on:click={() => showSettings = true}>Settings</button>
+</div>
   </div>
 </div>
 
