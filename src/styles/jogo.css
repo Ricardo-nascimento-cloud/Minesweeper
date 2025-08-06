@@ -145,6 +145,11 @@ button.reiniciar:hover, .btnhome1:hover {
       width: 30vw;
       height: 10vw;
     }
+
+    .timer {
+      font-size: 4vw;
+    }
+    
     .game {
         width: 98vw;
         height: 98vw;
