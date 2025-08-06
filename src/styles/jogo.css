@@ -100,7 +100,7 @@ button.reiniciar:hover, .btnhome1:hover {
     user-select: none;
     padding: 0;
     font-size: 14px;
-    transition: background 0.5s;
+    transition: background 1s ease-in-out, color 1s ease-in-out;
   }
 
   .cell.chess {
