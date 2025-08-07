@@ -2,14 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url('/cursor.png'), auto;
+    cursor: url('/cursor_32x32.png') 16 16, auto;
 }
 body {
-    cursor: url('/cursor.png'), auto;  
+    cursor: url('/cursor_32x32.png') 16 16, auto;  
     background-image: url("/bac.webp");
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
@@ -91,6 +93,7 @@ img, .logo, .logoGame, .logoIFPE {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    cursor: url('/cursor_pointer_32x32.png') 16 16, auto;
     transition: background-color 0.5s ease-in-out;
     text-decoration: none; 
     display: flex; 
@@ -112,6 +115,7 @@ img, .logo, .logoGame, .logoIFPE {
  border: none;
  border-radius: 5px;
  cursor: pointer;
+ cursor: url('/cursor_pointer_32x32.png') 16 16, auto;
  transition: background-color 0.5s ease-in-out;
  margin: 50px;
  text-decoration: none;
@@ -150,18 +154,19 @@ img, .logo, .logoGame, .logoIFPE {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
-  color: white;
+  color: #ffffff;
   font-size: 18px;
 }
 
 .difficulty-select {
     background: #424242;
-    color: white;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     padding: 8px 12px;
     font-size: 16px;
     cursor: pointer;
+    cursor: url('/cursor_pointer_32x32.png') 16 16, auto;
     transition: background 0.3s ease-in-out;
 }
 
@@ -177,6 +182,7 @@ img, .logo, .logoGame, .logoIFPE {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  cursor: url('/cursor_pointer_32x32.png') 16 16, auto;
 }
 
 .dev {
@@ -203,32 +209,37 @@ img, .logo, .logoGame, .logoIFPE {
     align-items: flex-start;
 }
 
-.dev-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-top: 0;
-    margin-left: 50px;
-    margin-right: 0;
-    display: block;
-}
-
 .dev-name {
     margin: 0;
     font-size: 36px;
-    color: white;
+    color: #ffffff;
+    text-align: center;
 }
 
 .email a{
     font-size: 18px;
+    text-align: center;
     text-decoration: none;
     margin: 0;
-    color: white;
+    color: #ffffff;
     transition: color 0.5s ease-in-out;
     cursor: pointer;
+    cursor: url('/cursor_pointer_32x32.png') 16 16, auto;
 }
 
-.email a:hover {
+.email1 a {
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0;
+    margin-left: 23px;
+    color: #ffffff;
+    transition: color 0.5s ease-in-out;
+    cursor: pointer;
+    cursor: url('/cursor_pointer_32x32.png') 16 16, auto;
+}
+
+.email a:hover, .email1 a:hover {
     color: black;
     transition: color 0.5s ease-in-out;
 }
