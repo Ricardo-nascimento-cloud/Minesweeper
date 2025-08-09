@@ -9,7 +9,7 @@
 <div class="menu">
   <div class="dev-info">
     <div class="dev-informacao">
-      <p class="dev-name">Marcelo Henrique</p>
+      <p class="dev-name1">Marcelo Henrique</p>
       <p class="email1"><a href="mailto:mhas8@discente.ifpe.edu.br">mhas8@discente.ifpe.edu.br</a></p>
     </div>
   </div>

@@ -235,6 +235,13 @@ img, .logo, .logoGame, .logoIFPE {
     text-align: center;
 }
 
+.dev-name1 {
+    margin: 0;
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center;
+}
+
 .email a{
     font-size: 18px;
     text-align: center;
@@ -320,9 +327,15 @@ img, .logo, .logoGame, .logoIFPE {
         height: 40px;
         font-size: 18px;
     }
+    
+    .menu{
+        margin-bottom: -5px;
+    }
 
     .dev {
         font-size: 24px; 
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 
     .dev-info {
@@ -339,9 +352,22 @@ img, .logo, .logoGame, .logoIFPE {
     .dev-name {
         font-size: 24px; 
     }
+    .dev-name1 {
+        font-size: 24px; 
+        margin-left: 20px;
+    }
 
     .email a {
         font-size: 16px;
+    }
+
+    .email1 a {
+        font-size: 16px;
+    }
+
+    .btnhome {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .rodape {
