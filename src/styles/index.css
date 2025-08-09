@@ -409,6 +409,8 @@ html {
   .menu {
     width: 95vw;
     min-width: unset;
+    margin-bottom: -5px;
+    margin-top: -5px;
   }
   .logo {
     width: 60vw;
