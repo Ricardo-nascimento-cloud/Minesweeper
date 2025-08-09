@@ -41,11 +41,11 @@
       <p class="email"><a href="mailto:grs21@discente.ifpe.edu.br">grs21@discente.ifpe.edu.br</a></p>
     </div>
   </div>
-  <a href="/" class="btnhome">Home</a>
 </div>
 
-<!-- <div class="buttons"> -->
-<!-- </div> -->
+<div class="buttons">
+  <a href="/" class="btnhome">Home</a>
+</div>
 
 <svelte:head>
   <style>
