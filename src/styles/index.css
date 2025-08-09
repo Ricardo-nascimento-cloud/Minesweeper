@@ -328,10 +328,6 @@ img, .logo, .logoGame, .logoIFPE {
         font-size: 18px;
     }
     
-    .menu{
-        margin-bottom: -5px;
-    }
-
     .dev {
         font-size: 24px; 
         margin-bottom: 10px;
@@ -405,15 +401,7 @@ html {
   .menu {
     width: 95vw;
     min-width: unset;
-    margin-bottom: 0;
-    margin-top: -50px;
   }
-  
-  .btnhome{
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
   .logo {
     width: 60vw;
     max-width: 200px;
