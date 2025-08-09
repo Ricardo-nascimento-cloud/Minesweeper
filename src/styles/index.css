@@ -369,10 +369,6 @@ img, .logo, .logoGame, .logoIFPE {
         margin-top: 10px;
         margin-bottom: 10px;
     }
-
-    .rodape {
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 720px) {
@@ -414,7 +410,7 @@ html {
   }
   
   .btnhome{
-    margin-top: -50px;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 

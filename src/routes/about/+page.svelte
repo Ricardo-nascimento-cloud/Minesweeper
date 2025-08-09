@@ -47,11 +47,6 @@
   <a href="/" class="btnhome">Home</a>
 </div>
 
-<footer class="rodape">
-  <p>&copy; 2025 Minesweeper. All rights reserved.</p>
-</footer>
-
-
 <svelte:head>
   <style>
     html, body {
