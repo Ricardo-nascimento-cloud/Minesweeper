@@ -366,8 +366,8 @@ img, .logo, .logoGame, .logoIFPE {
     }
 
     .btnhome {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: -5px;
+        margin-bottom: -5px;
     }
 
     .rodape {
@@ -412,6 +412,12 @@ html {
     margin-bottom: -5px;
     margin-top: -5px;
   }
+  
+  .btnhome{
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+
   .logo {
     width: 60vw;
     max-width: 200px;
