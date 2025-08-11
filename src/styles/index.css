@@ -1,11 +1,10 @@
+/* =================== CSS ORIGINAL =================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* cursor: url('/cursor_32x32.png') 16 16, auto; */
 }
 body {
-    /* cursor: url('/cursor_32x32.png') 16 16, auto;   */
     background-image: url("/bac.webp");
     width: 100%;
     height: 100%;
@@ -51,25 +50,6 @@ img, .logo, .logoGame, .logoIFPE {
     margin-bottom: 0;
 }
 
-.logoGame {
-    width: 200px;
-    height: 200px;
-    margin-top: 0;
-    border-radius: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.logoIFPE {
-    width: 200px;
-    height: 200px;
-    margin-top: 0;
-    border-radius: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .buttons {
     display: flex;
     flex-direction: column;
@@ -79,7 +59,7 @@ img, .logo, .logoGame, .logoIFPE {
     gap: 20px;
 }
 
-.playButton, .aboutButton, .settingsButton {
+.playButton, .aboutButton, .settingsButton, .about-btn-home {
     background-image: url(/btn.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -93,7 +73,6 @@ img, .logo, .logoGame, .logoIFPE {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /* cursor: url('/cursor_pointer_32x32.png') 16 16, auto; */
     transition: background-color 0.5s ease-in-out;
     text-decoration: none; 
     display: flex; 
@@ -101,30 +80,7 @@ img, .logo, .logoGame, .logoIFPE {
     justify-content: center;
 }
 
-.btnhome {
- background-image: url(/btn.png);
- background-size: cover;
- background-repeat: no-repeat;
- background-position: center;
- background-color: transparent;
- color: hwb(0 15% 85%);
- font-family: 'Arial', sans-serif;
- width: 200px;
- height: 50px;
- font-size: 1.5rem;
- border: none;
- border-radius: 5px;
- cursor: pointer;
- /* cursor: url('/cursor_pointer_32x32.png') 16 16, auto; */
- transition: background-color 0.5s ease-in-out;
- margin: 50px;
- text-decoration: none;
- display: flex;
- align-items: center;
- justify-content: center;
-}
-
-.aboutButton:hover, .playButton:hover , .btnhome:hover, .settingsButton:hover {
+.aboutButton:hover, .playButton:hover , .about-btn-home:hover, .settingsButton:hover {
     background-color: #424242;
     filter: brightness(1.2);
     transition: background-color 0.5s ease-in-out;
@@ -204,163 +160,42 @@ img, .logo, .logoGame, .logoIFPE {
     background: #6b6b6b;
 }
 
-.dev {
-    font-size: 36px;
-    margin-top: 50px;
-    text-align: center;
-    margin-top: -50px;
-    margin-bottom: 50px;
-    color: white;
-}
-
-.dev-info {
-    display: flex;
-    align-items: center;
-    font-size: 36px;
-    margin-top: 20px;
-    text-align: left;
-    gap: 24px;
-}
-
-.dev-informacao {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.dev-name {
-    margin: 0;
-    font-size: 36px;
-    color: #ffffff;
-    text-align: center;
-}
-
-.dev-name1 {
-    margin: 0;
-    font-size: 36px;
-    color: #ffffff;
-    text-align: center;
-}
-
-.email a{
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-    margin: 0;
-    color: #ffffff;
-    transition: color 0.5s ease-in-out;
-    cursor: pointer;
-    /* cursor: url('/cursor_pointer_32x32.png') 16 16, auto; */
-}
-
-.email1 a {
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-    margin: 0;
-    margin-left: 23px;
-    color: #ffffff;
-    transition: color 0.5s ease-in-out;
-    cursor: pointer;
-    /* cursor: url('/cursor_pointer_32x32.png') 16 16, auto; */
-}
-
-.email a:hover, .email1 a:hover {
-    color: black;
-    transition: color 0.5s ease-in-out;
-}
-
-.rodape {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: #6b6b6b;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-}
-
-
 /* responsividade */
-
 @media (max-width: 768px) {
-    body{
-        background-image: url("/bac.webp");
-        background-size: cover;
-        background-repeat: no-repeat;   
-        background-attachment: fixed;
-    }
-
     .logo{
         width: 300px;
         height: 300px;
         margin-top: -80px;
     }
-
-    .logoIFPE {
-        width: 150px;
-        height: 150px;
-        margin-top: 20px;
-
-    }
-
-    .logoGame {
+    .logoIFPE, .logoGame {
         width: 150px;
         height: 150px;
         margin-top: 20px;
     }
-
-    .title {
-        font-size: 48px;
-    }
-
     .buttons {
         flex-direction: column; 
-        gap: 10px;  /* reduz o espaço entre os botões */
+        gap: 10px;
     }
-    
     .aboutButton, .playButton, .btnhome, .settingsButton {
         width: 120px; 
         height: 40px;
         font-size: 18px;
     }
-    
     .dev {
         font-size: 24px; 
         margin-bottom: 10px;
         margin-top: 10px;
     }
-
     .dev-info {
         flex-direction: column; 
         align-items: center; 
     }
-
-    .dev-img {
-        width: 100px; 
-        height: 100px;
-        margin: 0 auto;
-    }
-
-    .dev-name {
+    .dev-name, .dev-name1 {
         font-size: 24px; 
     }
-    .dev-name1 {
-        font-size: 24px; 
-        margin-left: 20px;
-    }
-
-    .email a {
+    .email a, .email1 a {
         font-size: 16px;
     }
-
-    .email1 a {
-        font-size: 16px;
-    }
-
     .btnhome {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -369,7 +204,6 @@ img, .logo, .logoGame, .logoIFPE {
 
 @media (max-width: 720px) {
    body {
-    background-image: url("/bac.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -377,38 +211,141 @@ img, .logo, .logoGame, .logoIFPE {
     height: 100vh;
     overflow: hidden;
     margin: 0;
-}
-
-html {
+   }
+   html {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-}
-
-
-    .logo {
+   }
+   .logo {
         width: 250px;
         height: 250px;
         margin-top: -60px;
-    }
+   }
+   .container, .about-container {
+        width: 100vw;
+        max-width: 100vw;
+        overflow: hidden;
+        padding: 0 2vw;
+   }
+   .menu {
+        width: 95vw;
+        min-width: unset;
+   }
+   .logo {
+        width: 60vw;
+        max-width: 200px;
+   }
+   .settings-content {
+        min-width: 90vw;
+        width: 90vw;
+        padding: 16px 4vw;
+   }
+}
 
-  .container, .about-container {
-    width: 100vw;
-    max-width: 100vw;
-    overflow: hidden;
-    padding: 0 2vw;
+/* =================== CSS NOVO PARA SOBRE =================== */
+.about-container {
+  text-align: center;
+  padding: 20px;
+  background-image: url("/bac.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.about-logo-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.about-logo-img {
+  width: 180px;
+  height: 180px;
+  image-rendering: pixelated;
+}
+
+.about-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px black;
+}
+
+.about-dev-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.about-dev-card {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px 20px;
+  border-radius: 6px;
+  width: fit-content;
+  transition: background 1s ease-in-out, color 1s ease-in-out;
+}
+
+.about-dev-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.about-dev-name {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.about-dev-email {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  transition: background 1s ease-in-out, color 1s ease-in-out;
+}
+
+.about-dev-email:hover {
+  color: black;
+}
+
+.about-btn-home {
+  background-image: url(/btn.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  color: hwb(0 15% 85%);
+  font-family: 'Arial', sans-serif;
+  width: 200px;
+  height: 50px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  margin: 30px auto 0 auto; /* margem superior 30px, centralizado horizontalmente */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-btn-home:hover {
+  filter: brightness(1.2);
+}
+
+@media (max-width: 600px) {
+  .about-logo-img {
+    width: 140px;
+    height: 140px;
   }
-  .menu {
-    width: 95vw;
-    min-width: unset;
+  .about-title {
+    font-size: 22px;
   }
-  .logo {
-    width: 60vw;
-    max-width: 200px;
-  }
-  .settings-content {
-    min-width: 90vw;
-    width: 90vw;
-    padding: 16px 4vw;
+  .about-dev-name {
+    font-size: 16px;
   }
 }

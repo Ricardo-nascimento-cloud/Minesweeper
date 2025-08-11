@@ -1,51 +1,37 @@
-<div class="logo">
-  <img class="logoIFPE" src="/logoIFPE-removebg-preview.png" alt="Logo da instituição" />
-  <img class="logoGame" src="/logo.png" alt="Logo do game" />
+<div class="about-container">
+  <div class="about-logo-row">
+    <img src="/logoIFPE-removebg-preview.png" alt="Logo IFPE" class="about-logo-img" />
+    <img src="/logo.png" alt="Logo do Game" class="about-logo-img" />
+  </div>
+
+  <h1 class="about-title">DEVELOPERS</h1>
+
+  <div class="about-dev-list">
+    <div class="about-dev-card">
+      <p class="about-dev-name">Marcelo Henrique</p>
+      <a href="mailto:mhas8@discente.ifpe.edu.br" class="about-dev-email">mhas8@discente.ifpe.edu.br</a>
+    </div>
+    <div class="about-dev-card">
+      <p class="about-dev-name">Ricardo João</p>
+      <a href="mailto:rjnf1@discente.ifpe.edu.br" class="about-dev-email">rjnf1@discente.ifpe.edu.br</a>
+    </div>
+    <div class="about-dev-card">
+      <p class="about-dev-name">Gabriel Lopes</p>
+      <a href="mailto:glo3@discente.ifpe.edu.br" class="about-dev-email">glo3@discente.ifpe.edu.br</a>
+    </div>
+    <div class="about-dev-card">
+      <p class="about-dev-name">Thyago Ruan</p>
+      <a href="mailto:trgl@discente.ifpe.edu.br" class="about-dev-email">trgl@discente.ifpe.edu.br</a>
+    </div>
+    <div class="about-dev-card">
+      <p class="about-dev-name">Gabriel Ramos</p>
+      <a href="mailto:grs21@discente.ifpe.edu.br" class="about-dev-email">grs21@discente.ifpe.edu.br</a>
+    </div>
+  </div>
+
+  <a href="/" class="about-btn-home">Home</a>
 </div>
 
-<h1 class="dev">DEVELOPERS</h1>
-
-<!-- Lista de desenvolvedores -->
-<div class="menu">
-  <div class="dev-info">
-    <div class="dev-informacao">
-      <p class="dev-name1">Marcelo Henrique</p>
-      <p class="email1"><a href="mailto:mhas8@discente.ifpe.edu.br">mhas8@discente.ifpe.edu.br</a></p>
-    </div>
-  </div>
-
-  <div class="dev-info">
-    <div class="dev-informacao">
-      <p class="dev-name">Ricardo João</p>
-      <p class="email"><a href="mailto:rjnf1@discente.ifpe.edu.br">rjnf1@discente.ifpe.edu.br</a></p>
-    </div>
-  </div>
-
-  <div class="dev-info">
-    <div class="dev-informacao">
-      <p class="dev-name">Gabriel Lopes</p>
-      <p class="email"><a href="mailto:glo3@discente.ifpe.edu.br">glo3@discente.ifpe.edu.br</a></p>
-    </div>
-  </div>
-
-  <div class="dev-info">
-    <div class="dev-informacao">
-      <p class="dev-name">Thyago Ruan</p>
-      <p class="email"><a href="mailto:trgl@discente.ifpe.edu.br">trgl@discente.ifpe.edu.br</a></p>
-    </div>
-  </div>
-
-  <div class="dev-info">
-    <div class="dev-informacao">
-      <p class="dev-name">Gabriel Ramos</p>
-      <p class="email"><a href="mailto:grs21@discente.ifpe.edu.br">grs21@discente.ifpe.edu.br</a></p>
-    </div>
-  </div>
-</div>
-
-<div class="buttons">
-  <a href="/" class="btnhome">Home</a>
-</div>
 
 <svelte:head>
   <style>
