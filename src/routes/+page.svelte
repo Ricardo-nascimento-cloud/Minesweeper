@@ -17,7 +17,7 @@
   }
 
   onMount(() => {
-    initMedia('/background.mp4');
+    initMedia('/background.mp3');
   });
 
   function toggleMusic() {
